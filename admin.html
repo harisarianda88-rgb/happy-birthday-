@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Ucapan Haris - Admin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="admin-wrap">
+    <div class="card admin-card">
+      <h1>🔐 Ucapan untuk Haris</h1>
+      <p class="intro">Halaman pribadi untuk melihat ucapan yang masuk.</p>
+
+      <section id="loginBox">
+        <label for="email">Email admin</label>
+        <input id="email" type="email" autocomplete="username" placeholder="Email admin">
+        <label for="password">Password admin</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Password admin">
+        <button class="primary" id="loginBtn">Masuk</button>
+        <p id="loginStatus" class="status"></p>
+      </section>
+
+      <section id="messagesBox" hidden>
+        <div class="admin-top">
+          <h2>💌 Daftar Ucapan</h2>
+          <button class="secondary" id="logoutBtn">Keluar</button>
+        </div>
+        <p id="count" class="small"></p>
+        <div id="messages"></div>
+      </section>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

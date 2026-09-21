@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Happy Birthday Haris Arianda 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <main class="hero">
+    <div class="card">
+      <div class="badge">26 SEPTEMBER 2026</div>
+      <h1>Happy Birthday,<br><span>Haris Arianda</span> 🎂</h1>
+      <p class="intro">Tinggalkan satu ucapan untuk Haris di hari spesialnya.</p>
+
+      <img src="assets/haris.jpg" alt="Foto Haris dan keluarga" class="birthday-photo">
+
+      <button class="primary" onclick="document.getElementById('wishBox').scrollIntoView({behavior:'smooth'})">
+        💌 Berikan Ucapan
+      </button>
+
+
+      <section id="accessGate" class="access-gate">
+        <div class="gate-icon">🎟️</div>
+        <h2>Undangan Ulang Tahun</h2>
+        <p>Masukkan kode undangan yang dibagikan bersama link/QR Code.</p>
+        <input id="inviteCode" type="text" maxlength="20" autocomplete="off"
+               placeholder="Kode undangan">
+        <button class="primary" id="unlockBtn">Buka Undangan 🎂</button>
+        <p id="gateStatus" class="status"></p>
+      </section>
+
+      <section id="birthdayContent" hidden>
+
+      <section id="wishBox" class="wish-box">
+        <h2>💙 Tulis Ucapanmu</h2>
+        <form id="wishForm">
+          <label for="name">Nama</label>
+          <input id="name" maxlength="60" required placeholder="Masukkan nama kamu">
+
+          <label for="message">Ucapan</label>
+          <textarea id="message" maxlength="500" required placeholder="Tulis ucapan ulang tahun..."></textarea>
+
+          <button class="primary" type="submit" id="sendBtn">Kirim Ucapan ✨</button>
+          <p id="status" class="status"></p>
+        </form>
+      </section>
+
+      </section>
+      <p class="small">Ucapan yang dikirim hanya dapat dilihat oleh Haris melalui halaman khusus.</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
