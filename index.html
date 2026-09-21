@@ -1,60 +1,522 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Happy Birthday Haris Arianda 🎂</title>
-  <link rel="stylesheet" href="style.css">
+
+  <meta name="description" content="Ucapan ulang tahun untuk Haris Arianda">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #17365f 0%, #071525 45%, #030914 100%);
+      color: white;
+      min-height: 100vh;
+      padding: 25px 15px 50px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(13, 29, 49, 0.92);
+      border: 1px solid rgba(130, 190, 255, 0.2);
+      border-radius: 28px;
+      padding: 30px 22px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+      margin-bottom: 20px;
+    }
+
+    .date {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 30px;
+      background: rgba(50, 145, 230, 0.18);
+      border: 1px solid rgba(100, 190, 255, 0.4);
+      color: #9bd5ff;
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 10vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    h1 span {
+      color: #55aaff;
+    }
+
+    .intro {
+      color: #b9c9dc;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .photo-box {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 20px;
+      border: 2px solid rgba(120, 190, 255, 0.25);
+      background: #081426;
+      margin-bottom: 22px;
+    }
+
+    .photo-box img {
+      width: 100%;
+      display: block;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    .photo-error {
+      display: none;
+      padding: 25px;
+      text-align: center;
+      color: #b9c9dc;
+    }
+
+    .birthday-button {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      border: none;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #76c7ff, #398eea);
+      color: #06101d;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(50, 150, 255, 0.25);
+    }
+
+    .birthday-button:active {
+      transform: scale(0.98);
+    }
+
+    .form-card {
+      background: rgba(17, 34, 55, 0.95);
+    }
+
+    .form-title {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin: 18px 0 8px;
+      color: #dcecff;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(130, 190, 255, 0.25);
+      border-radius: 16px;
+      padding: 16px;
+      background: #071525;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #55aaff;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .send-button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 17px;
+      border: none;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #62b8ff, #3489e8);
+      color: #06101d;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .message {
+      display: none;
+      margin-top: 18px;
+      padding: 15px;
+      border-radius: 14px;
+      background: rgba(70, 180, 120, 0.15);
+      border: 1px solid rgba(80, 200, 130, 0.3);
+      color: #baf5d0;
+      line-height: 1.5;
+    }
+
+    .wishes {
+      margin-top: 25px;
+    }
+
+    .wish {
+      background: rgba(4, 17, 31, 0.7);
+      border: 1px solid rgba(120, 180, 230, 0.15);
+      border-radius: 16px;
+      padding: 15px;
+      margin-top: 12px;
+    }
+
+    .wish-name {
+      font-weight: bold;
+      color: #70bdff;
+      margin-bottom: 7px;
+    }
+
+    .wish-text {
+      color: #d0dceb;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      color: #73869c;
+      font-size: 13px;
+      margin-top: 25px;
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -30px;
+      font-size: 20px;
+      animation: floatUp 5s linear forwards;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-  <div class="stars"></div>
-  <main class="hero">
-    <div class="card">
-      <div class="badge">26 SEPTEMBER 2026</div>
-      <h1>Happy Birthday,<br><span>Haris Arianda</span> 🎂</h1>
-      <p class="intro">Tinggalkan satu ucapan untuk Haris di hari spesialnya.</p>
 
-      <img src="assets/haris.jpg" alt="Foto Haris dan keluarga" class="birthday-photo">
+  <main class="container">
 
-      <button class="primary" onclick="document.getElementById('wishBox').scrollIntoView({behavior:'smooth'})">
+    <!-- BAGIAN UTAMA -->
+    <section class="card">
+
+      <div class="date">
+        26 SEPTEMBER 2026
+      </div>
+
+      <h1>
+        Happy Birthday,<br>
+        <span>Haris Arianda</span> 🎂
+      </h1>
+
+      <p class="intro">
+        Tinggalkan satu ucapan untuk Haris di hari spesialnya.
+      </p>
+
+      <!-- FOTO -->
+      <div class="photo-box">
+
+        <!--
+          PENTING:
+          haris.jpg harus berada satu folder dengan index.html
+        -->
+        <img
+          src="haris.jpg"
+          alt="Foto Haris dan keluarga"
+          onerror="showImageError()"
+        >
+
+        <div id="photoError" class="photo-error">
+          🖼️ Foto belum ditemukan.<br>
+          Pastikan file <b>haris.jpg</b> berada di folder yang sama
+          dengan index.html.
+        </div>
+
+      </div>
+
+      <button class="birthday-button" onclick="scrollToForm()">
         💌 Berikan Ucapan
       </button>
 
+    </section>
 
-      <section id="accessGate" class="access-gate">
-        <div class="gate-icon">🎟️</div>
-        <h2>Undangan Ulang Tahun</h2>
-        <p>Masukkan kode undangan yang dibagikan bersama link/QR Code.</p>
-        <input id="inviteCode" type="text" maxlength="20" autocomplete="off"
-               placeholder="Kode undangan">
-        <button class="primary" id="unlockBtn">Buka Undangan 🎂</button>
-        <p id="gateStatus" class="status"></p>
-      </section>
 
-      <section id="birthdayContent" hidden>
+    <!-- FORM UCAPAN -->
+    <section class="card form-card" id="formSection">
 
-      <section id="wishBox" class="wish-box">
-        <h2>💙 Tulis Ucapanmu</h2>
-        <form id="wishForm">
-          <label for="name">Nama</label>
-          <input id="name" maxlength="60" required placeholder="Masukkan nama kamu">
+      <h2 class="form-title">
+        💙 Tulis Ucapanmu
+      </h2>
 
-          <label for="message">Ucapan</label>
-          <textarea id="message" maxlength="500" required placeholder="Tulis ucapan ulang tahun..."></textarea>
+      <form id="wishForm">
 
-          <button class="primary" type="submit" id="sendBtn">Kirim Ucapan ✨</button>
-          <p id="status" class="status"></p>
-        </form>
-      </section>
+        <label for="name">
+          Nama
+        </label>
 
-      </section>
-      <p class="small">Ucapan yang dikirim hanya dapat dilihat oleh Haris melalui halaman khusus.</p>
-    </div>
+        <input
+          type="text"
+          id="name"
+          placeholder="Masukkan namamu"
+          maxlength="40"
+          required
+        >
+
+        <label for="wish">
+          Ucapan
+        </label>
+
+        <textarea
+          id="wish"
+          placeholder="Tulis ucapan ulang tahun..."
+          maxlength="300"
+          required
+        ></textarea>
+
+        <button
+          type="submit"
+          class="send-button"
+        >
+          💌 Kirim Ucapan
+        </button>
+
+      </form>
+
+      <div id="message" class="message"></div>
+
+      <!-- UCAPAN YANG TERSIMPAN DI PERANGKAT -->
+      <div class="wishes">
+
+        <h3>
+          💙 Ucapan
+        </h3>
+
+        <div id="wishList"></div>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+      Dibuat untuk hari spesial Haris Arianda 🎂
+    </footer>
+
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="config.js"></script>
-  <script src="app.js"></script>
+
+  <script>
+
+    /* =========================
+       FOTO
+    ========================= */
+
+    function showImageError() {
+      document.querySelector(".photo-box img").style.display = "none";
+      document.getElementById("photoError").style.display = "block";
+    }
+
+
+    /* =========================
+       TOMBOL UCAPAN
+    ========================= */
+
+    function scrollToForm() {
+      document.getElementById("formSection").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+
+    /* =========================
+       FORM UCAPAN
+    ========================= */
+
+    const form = document.getElementById("wishForm");
+    const wishList = document.getElementById("wishList");
+    const message = document.getElementById("message");
+
+
+    function loadWishes() {
+
+      const saved =
+        JSON.parse(localStorage.getItem("birthdayWishes")) || [];
+
+      wishList.innerHTML = "";
+
+      if (saved.length === 0) {
+
+        wishList.innerHTML = `
+          <p style="color:#7f91a6;margin-top:12px;">
+            Belum ada ucapan. Jadilah yang pertama! 🎉
+          </p>
+        `;
+
+        return;
+      }
+
+      saved.forEach(function(item) {
+
+        const div = document.createElement("div");
+
+        div.className = "wish";
+
+        div.innerHTML = `
+          <div class="wish-name">
+            💙 ${escapeHTML(item.name)}
+          </div>
+
+          <div class="wish-text">
+            ${escapeHTML(item.wish)}
+          </div>
+        `;
+
+        wishList.appendChild(div);
+
+      });
+
+    }
+
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      const name =
+        document.getElementById("name").value.trim();
+
+      const wish =
+        document.getElementById("wish").value.trim();
+
+
+      if (!name || !wish) {
+        return;
+      }
+
+
+      const saved =
+        JSON.parse(localStorage.getItem("birthdayWishes")) || [];
+
+
+      saved.unshift({
+        name: name,
+        wish: wish
+      });
+
+
+      localStorage.setItem(
+        "birthdayWishes",
+        JSON.stringify(saved)
+      );
+
+
+      form.reset();
+
+      message.style.display = "block";
+
+      message.innerHTML =
+        "✅ Ucapan berhasil ditambahkan!";
+
+
+      loadWishes();
+
+      createHeart();
+
+
+      setTimeout(function() {
+        message.style.display = "none";
+      }, 3000);
+
+    });
+
+
+    /* =========================
+       KEAMANAN TEKS
+    ========================= */
+
+    function escapeHTML(text) {
+
+      const div = document.createElement("div");
+
+      div.textContent = text;
+
+      return div.innerHTML;
+
+    }
+
+
+    /* =========================
+       EFEK HATI
+    ========================= */
+
+    function createHeart() {
+
+      const heart =
+        document.createElement("div");
+
+      heart.className = "heart";
+
+      heart.textContent = "💙";
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.animationDuration =
+        (3 + Math.random() * 3) + "s";
+
+      document.body.appendChild(heart);
+
+
+      setTimeout(function() {
+        heart.remove();
+      }, 6000);
+
+    }
+
+
+    /* =========================
+       UCAPAN AWAL
+    ========================= */
+
+    loadWishes();
+
+  </script>
+
 </body>
 </html>
